@@ -1,0 +1,42 @@
+﻿@model PropertiesViewModel
+
+<h1>@Model.Title</h1>
+<div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Building Name</th>
+                <th scope="col">County</th>
+                <th scope="col">District</th>
+                <th scope="col">Estate Type</th>
+                <th scope="col">Locality</th>
+                <th scope="col">New Build</th>
+                <th scope="col">Post Code</th>
+                <th scope="col">Price</th>
+                <th scope="col">Property Type</th>
+                <th scope="col">Secondary Name</th>
+                <th scope="col">Street</th>
+                <th scope="col">Town</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var property in Model.PropertyTransactions)
+            {
+                <tr>
+                    <td>@property.BuildingName</td>
+                    <td>@property.County</td>
+                    <td>@property.District</td>
+                    <td>@property.EstateType</td>
+                    <td>@property.Locality</td>
+                    <td>@property.NewBuild</td>
+                    <td>@property.PostCode</td>
+                    <td>@property.Price</td>
+                    <td>@property.PropertyType</td>
+                    <td>@property.SecondaryName</td>
+                    <td>@property.Street</td>
+                    <td>@property.Town</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
